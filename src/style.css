@@ -1,0 +1,166 @@
+* {
+    color: #ECF2DF;
+}
+
+html {
+    height: 100%;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+input,
+select,
+textarea {
+    color: black;
+    display: block;
+    background-color: #ECF2DF;
+}
+
+input#button-edit-task,
+input#button-submit-task,
+input#button-submit-project {
+    margin: 10px auto 10px auto;
+}
+
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.popup {
+    width: 300px;
+    position: fixed;
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
+    border-radius: 30px;
+    padding: 30px;
+    background: #0455BF;
+    border: 1px solid #ECF2DF;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+.hidden {
+    visibility: hidden;
+    display: none;
+}
+
+button {
+    margin: 10px;
+    font-weight: 600;
+    border-radius: 60px;
+    color: black;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.95;
+    scale: 1.05;
+}
+
+button.close {
+    margin: 0;
+    margin-left: auto;
+    display: block;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 12px 0 12px;
+}
+
+/* PROJECT TITLE */
+#projects-container li {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: 5px 0 5px 0;
+}
+
+section#todo {
+    display: grid;
+    grid-template-areas: "projects tasks";
+    grid-template-columns: 250px calc(100% - 250px);
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    section#todo {
+            display: flex;
+            flex-direction: column;
+        }
+}
+
+#projects-container {
+    grid-area: projects;
+    background: #1E91D9;
+}
+
+#tasks-container {
+    grid-area: tasks;
+    background: #5EC8F2;
+}
+
+.task-container {
+    background: #ECF2DF;
+    border-radius: 30px;
+    padding: 30px;
+    margin: 15px 0 15px 0;
+    opacity: 0.95;
+}
+
+.task-container * {
+    color: black;
+}
+
+.task-title:hover {
+    cursor: pointer;
+}
+
+.button-container {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+}
+
+.low,
+.medium,
+.high {
+    border: 6px solid;
+}
+
+.low {
+    border-color: greenyellow
+}
+
+.medium {
+    border-color: orange
+}
+
+.high {
+    border-color: red
+}
+
+button.edit-task.close {
+    margin-right: 6px;
+}
+
+.button-remove-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

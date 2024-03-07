@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Todo List</title>
+</head>
+
+<body>
+    <section id="todo">
+        <div id="projects-container">
+            <div class="button-container">
+                <button id="add-project">+ project</button>
+            </div>
+            <div id="projects"></div>
+        </div>
+        <div id="tasks-container">
+            <div class="button-container">
+                <button id="add-task">+ task</button>
+            </div>
+            <div id="tasks"></div>
+        </div>
+    </section>
+    <section id="add-popups">
+        <div id="add-project-popup" class="popup hidden">
+            <button id="close-project-popup" class="close">x</button>
+            <form>
+                <label for="project-title">Title:</label>
+                <input id="project-title"></input>
+                <input type="button" value="Submit" id="button-submit-project">
+            </form>
+        </div>
+        <div id="add-task-popup" class="popup hidden">
+            <button id="close-task-popup" class="close">x</button>
+            <form>
+                <label for="task-title">Title:</label>
+                <input id="task-title"></input>
+                <label for="task-description">Description:</label>
+                <textarea name="task-description" id="task-description" col="1" rows="3"></textarea>
+                <label for="task-due-date">Due date:</label>
+                <input id="task-due-date" type="date"></input>
+                <label for="task-priority">Priority:</label>
+                <select name="task-priority" id="task-priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <input type="button" value="Submit" id="button-submit-task">
+            </form>
+        </div>
+        <div id="edit-task-popup" class="popup hidden">
+            <button id="close-edit-task-popup" class="close">x</button>
+            <form>
+                <label for="edit-task-title">Title:</label>
+                <input id="edit-task-title"></input>
+                <label for="edit-task-description">Description:</label>
+                <textarea name="edit-task-description" id="edit-task-description" col="1" rows="3"></textarea>
+                <label for="edit-task-due-date">Due date:</label>
+                <input id="edit-task-due-date" type="date"></input>
+                <label for="edit-task-priority">Priority:</label>
+                <select name="edit-task-priority" id="edit-task-priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <input type="button" value="Submit" id="button-edit-task">
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
